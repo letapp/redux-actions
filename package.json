@@ -1,7 +1,7 @@
 {
-  "name": "redux-actions",
-  "version": "2.6.4",
-  "description": "Flux Standard Action utlities for Redux",
+  "name": "@letapp/redux-actions",
+  "version": "3.0.0",
+  "description": "Flux Standard Action utilities for Redux",
   "main": "lib/index.js",
   "unpkg": "dist/redux-actions.js",
   "module": "es/index.js",
