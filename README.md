@@ -9,23 +9,25 @@
 
 ### Table of Contents
 
+- [redux-actions](#redux-actions)
+  - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Usage](#usage)
-- [Documentation](#documentation)
+  - [Documentation](#documentation)
 
 # Getting Started
 
 ## Installation
 
 ```bash
-$ npm install --save redux-actions
+$ npm install --save @letapp/redux-actions
 ```
 
 or
 
 ```bash
-$ yarn add redux-actions
+$ yarn add @letapp/redux-actions
 ```
 
 The [npm](https://www.npmjs.com) package provides a [CommonJS](http://webpack.github.io/docs/commonjs.html) build for use in Node.js, and with bundlers like [Webpack](http://webpack.github.io/) and [Browserify](http://browserify.org/). It also includes an [ES modules](http://jsmodules.io/) build that works well with [Rollup](http://rollupjs.org/) and [Webpack2](https://webpack.js.org)'s tree-shaking.
@@ -35,7 +37,11 @@ The [UMD](https://unpkg.com/redux-actions@latest/dist) build exports a global ca
 ## Usage
 
 ```js
-import { createActions, handleActions, combineActions } from 'redux-actions';
+import {
+  createActions,
+  handleActions,
+  combineActions
+} from '@letapp/redux-actions';
 
 const defaultState = { counter: 10 };
 
