@@ -39,6 +39,16 @@ describe('Default async action types', () => {
     expect(String(actionCreator)).toEqual(type);
   });
 
+  test('creates a valid action name for modular (aka redux-ducks) type of actions', () => {
+    const actionCreator = createAsyncActions('module/type');
+    expect(String(actionCreator)).toEqual('module/TYPE');
+  });
+
+  test('creates a valid action name for modular nested type of actions', () => {
+    const actionCreator = createAsyncActions('module/another/type');
+    expect(String(actionCreator)).toEqual('module/another/TYPE');
+  });
+
   test('creates default async actions constants set', () => {
     const actionCreator = createAsyncActions(type);
 
