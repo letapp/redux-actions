@@ -5,10 +5,17 @@ import isPlainObject from './utils/isPlainObject';
 let asyncActionTypes = ['start', 'success', 'error'];
 
 export default function createAsyncActions(actionType, actionOptions) {
+  if (actionType.includes('/')) {
+    const actionIndex = actionType.lastIndexOf('/') + 1;
+    const moduleName = actionType.substring(0, actionIndex);
+    const actionName = actionType.substring(actionIndex, actionType.length);
+    actionType = [moduleName, actionName.toUpperCase()].join('');
+  }
+
   const action = createAction(actionType);
 
   asyncActionTypes.forEach(type => {
-    const asyncType = [actionType, type].map(i => i.toUpperCase()).join('_');
+    const asyncType = [actionType, type.toUpperCase()].join('_');
     const actionTypeLower = type.toLowerCase();
 
     let payloadCreator;
